@@ -12,7 +12,7 @@ export default function LoginScreen() {
       <SafeAreaView  className="flex ">
         <View className="flex-row justify-start">
           <TouchableOpacity onPress={()=> navigation.goBack()} 
-          className="bg-yellow-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4">
+          className="p-2 rounded-tr-2xl rounded-bl-2xl ml-4" style={{backgroundColor: themeColors.btn}}>
             <ArrowLeftIcon size="20" color="black" />
           </TouchableOpacity>
         </View>
@@ -44,9 +44,9 @@ export default function LoginScreen() {
               <Text className="text-gray-700 mb-5">Forgot Password?</Text>
             </TouchableOpacity>
             <TouchableOpacity 
-              className="py-3 bg-yellow-400 rounded-xl">
+              className="py-3 rounded-xl" style={{backgroundColor: themeColors.btn}} >
                 <Text 
-                    className="text-xl font-bold text-center text-gray-700"
+                    className="text-xl font-bold text-center text-white"
                 >
                         Login
                 </Text>
@@ -70,7 +70,7 @@ export default function LoginScreen() {
                   Don't have an account?
               </Text>
               <TouchableOpacity onPress={()=> navigation.navigate('SignUp')}>
-                  <Text className="font-semibold text-yellow-500"> Sign Up</Text>
+                  <Text className="font-semibold" style={{color: themeColors.btn}}> Sign Up</Text>
               </TouchableOpacity>
           </View>
           

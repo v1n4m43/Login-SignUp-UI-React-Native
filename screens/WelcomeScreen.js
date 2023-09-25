@@ -14,15 +14,15 @@ export default function WelcomeScreen() {
                 Let's Get Started!
             </Text>
             <View className="flex-row justify-center">
-                <Image source={require("../assets/images/welcome.png")}
+                <Image source={require("../assets/images/banner2.png")}
                     style={{width: 350, height: 350}} />
             </View>
-            <View className="space-y-4">
+            <View className="space-y-8">
                 <TouchableOpacity
                     onPress={()=> navigation.navigate('SignUp')}
-                    className="py-3 bg-yellow-400 mx-7 rounded-xl">
+                    className="py-3 mx-7 rounded-xl" style={{backgroundColor: themeColors.btn}}>
                         <Text 
-                            className="text-xl font-bold text-center text-gray-700"
+                            className="text-xl font-bold text-center text-white"
                         >
                             Sign Up
                         </Text>
@@ -30,7 +30,7 @@ export default function WelcomeScreen() {
                 <View className="flex-row justify-center">
                     <Text className="text-white font-semibold">Already have an account?</Text>
                     <TouchableOpacity onPress={()=> navigation.navigate('Login')}>
-                        <Text className="font-semibold text-yellow-400"> Log In</Text>
+                        <Text className="font-semibold" style={{color: themeColors.btn}}> Log In</Text>
                     </TouchableOpacity>
                 </View>
             </View>
